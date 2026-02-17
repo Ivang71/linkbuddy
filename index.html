@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script data-cfasync="false" src="//d1j5bhx6uel4km.cloudfront.net/?xhbjd=1242582"></script>
-    <link rel="manifest" href="../TBCPL/manifest.json">
+    <link rel="manifest" href="TBCPL/manifest.json">
     <title>Link Buddy</title>
     <meta name="description" content="A friendly collection of links, organized by category.">
 
@@ -19,15 +19,15 @@
     <meta name="twitter:description" content="A friendly collection of links, organized by category.">
 
     <!-- Favicon -->
-    <link rel="icon" href="../images/logo.avif" type="image/avif">
-    <link rel="shortcut icon" href="../images/logo.avif" type="image/avif">
+    <link rel="icon" href="images/logo.avif" type="image/avif">
+    <link rel="shortcut icon" href="images/logo.avif" type="image/avif">
 
     <!-- Pace.js for page loading progress -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/pace.min.js"></script>
 
     <!-- Styles -->
-    <link rel="stylesheet" href="../TBCPL/css/flash.css">
-    <link rel="stylesheet" href="../TBCPL/ui.css">
+    <link rel="stylesheet" href="TBCPL/css/flash.css">
+    <link rel="stylesheet" href="TBCPL/ui.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@400;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
@@ -50,15 +50,15 @@
 <body>
     <div class="loading-screen" id="loadingScreen">
         <div class="christmas-loader">
-            <img src="../images/logo.avif" alt="Link Buddy Logo" class="christmas-logo">
+            <img src="images/logo.avif" alt="Link Buddy Logo" class="christmas-logo">
             <div class="loading-text">WELCOME BACK!</div>
         </div>
     </div>
 
     <nav class="navbar" id="navbar">
         <div class="nav-container">
-            <a href="index.html" class="nav-logo">
-                <img src="../images/logo.avif" alt="Link Buddy" class="nav-logo-img">
+            <a href="./" class="nav-logo">
+                <img src="images/logo.avif" alt="Link Buddy" class="nav-logo-img">
                 Link Buddy
             </a>
             <button class="nav-toggle" id="navToggle">
@@ -67,10 +67,10 @@
                 <span></span>
             </button>
             <ul class="nav-menu" id="navMenu">
-                <li><a href="index.html" class="nav-link active"><i class="fas fa-home"></i> Home</a></li>
-                <li><a href="about.html" class="nav-link"><i class="fas fa-info-circle"></i> About</a></li>
-                <li><a href="site-request.html" class="nav-link"><i class="fas fa-plus-circle"></i> Request</a></li>
-                <li><a href="dmca.html" class="nav-link"><i class="fas fa-shield-alt"></i> DMCA</a></li>
+                <li><a href="./" class="nav-link active"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="about/" class="nav-link"><i class="fas fa-info-circle"></i> About</a></li>
+                <li><a href="request/" class="nav-link"><i class="fas fa-plus-circle"></i> Request</a></li>
+                <li><a href="dmca/" class="nav-link"><i class="fas fa-shield-alt"></i> DMCA</a></li>
             </ul>
         </div>
     </nav>
@@ -101,11 +101,11 @@
                 <strong>Before clicking any link</strong><br>
                 To avoid too many popups and ads, try
                 <a href="https://brave.com/" class="festive-link" target="_blank">
-                    <img src="../TBCPL/assets/brave.png" alt="BRAVE Browser" class="inline-icon">
+                    <img src="TBCPL/assets/brave.png" alt="BRAVE Browser" class="inline-icon">
                 </a>
                 or use
                 <a href="https://ublockorigin.com/" class="festive-link" target="_blank">
-                    <img src="../TBCPL/assets/ublock.png" alt="Ad Blocker" class="inline-icon">
+                    <img src="TBCPL/assets/ublock.png" alt="Ad Blocker" class="inline-icon">
                 </a>
                 .
             </p>
@@ -114,11 +114,11 @@
         <div class="community-section-compact">
             <div class="community-links">
                 <a href="https://discord.gg/BPxzYVY5UU" target="_blank" class="community-link discord-link">
-                    <img src="../TBCPL/assets/discord.png" alt="Discord" class="community-icon">
+                    <img src="TBCPL/assets/discord.png" alt="Discord" class="community-icon">
                     Discord
                 </a>
                 <a href="https://www.reddit.com/r/TBCPL/" target="_blank" class="community-link reddit-link">
-                    <img src="../TBCPL/assets/reddit.png" alt="Reddit" class="community-icon">
+                    <img src="TBCPL/assets/reddit.png" alt="Reddit" class="community-icon">
                     Reddit
                 </a>
             </div>
@@ -178,7 +178,7 @@
     <script>
         async function loadLinks() {
             try {
-                const response = await fetch('../TBCPL/links.json');
+                const response = await fetch('TBCPL/links.json');
                 const data = await response.json();
                 const container = document.getElementById('categories-container');
 
@@ -210,12 +210,12 @@
                         .map(site => ({ ...site }));
                     if (category.id === 'movies') {
                         const replacements = [
-                            { name: 'Cine', url: 'https://cine.su', logo: '../images/cine.png', enabled: true },
-                            { name: 'Kalamatu', url: 'https://kalamatu.com', logo: '../images/kalamatu.png', enabled: true },
-                            { name: 'Industrial', url: 'https://industrial-gaming.sbs', logo: '../images/industrial.png', enabled: true },
-                            { name: 'Mito', url: 'https://mitoenergy.co', logo: '../images/mito.png', enabled: true },
-                            { name: 'Potok', url: 'https://potok.lat', logo: '../images/potok.png', enabled: true },
-                            { name: 'Global Streaming', url: 'https://globalstreaming.lol', logo: '../images/global_streaming.png', enabled: true }
+                            { name: 'Cine', url: 'https://cine.su', logo: 'images/cine.png', enabled: true },
+                            { name: 'Kalamatu', url: 'https://kalamatu.com', logo: 'images/kalamatu.png', enabled: true },
+                            { name: 'Industrial', url: 'https://industrial-gaming.sbs', logo: 'images/industrial.png', enabled: true },
+                            { name: 'Mito', url: 'https://mitoenergy.co', logo: 'images/mito.png', enabled: true },
+                            { name: 'Potok', url: 'https://potok.lat', logo: 'images/potok.png', enabled: true },
+                            { name: 'Global Streaming', url: 'https://globalstreaming.lol', logo: 'images/global_streaming.png', enabled: true }
                         ];
                         for (let i = 0; i < replacements.length && i < sites.length; i++) sites[i] = replacements[i];
 
@@ -233,10 +233,10 @@
                         link.setAttribute('data-name', site.name);
 
                         const logo = String(site.logo || '');
-                        const imgSrc = logo.startsWith('http') || logo.startsWith('/') || logo.startsWith('../')
+                        const imgSrc = logo.startsWith('http') || logo.startsWith('/') || logo.startsWith('images/') || logo.startsWith('TBCPL/')
                             ? logo
-                            : ('../TBCPL/' + logo.replace(/^\.\//, ''));
-                        const extraClass = imgSrc.startsWith('../images/') ? ' lb-custom-logo' : '';
+                            : ('TBCPL/' + logo.replace(/^\.\//, ''));
+                        const extraClass = imgSrc.startsWith('images/') ? ' lb-custom-logo' : '';
                         link.innerHTML = `<img src="${imgSrc}" alt="${site.name}" class="card-logo${extraClass}">`;
 
                         linksGrid.appendChild(link);
